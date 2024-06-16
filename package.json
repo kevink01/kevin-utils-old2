@@ -10,7 +10,10 @@
 		"lint": "eslint . --max-warnings 0",
 		"lint:fix": "eslint . --fix",
 		"prepare": "husky",
-		"test": "echo Hello"
+		"test": "vitest run --reporter=verbose",
+		"test:coverage": "vitest --coverage",
+		"test:ui": "vitest --ui",
+		"test:watch": "vitest --reporter=verbose"
 	},
 	"keywords": [],
 	"author": "Kevin Kulich",
@@ -19,6 +22,8 @@
 		"@types/node": "^20.14.2",
 		"@typescript-eslint/eslint-plugin": "^7.13.0",
 		"@typescript-eslint/parser": "^7.13.0",
+		"@vitest/coverage-v8": "^1.6.0",
+		"@vitest/ui": "^1.6.0",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-import-resolver-typescript": "^3.6.1",
@@ -26,7 +31,8 @@
 		"husky": "^9.0.11",
 		"lint-staged": "^15.2.7",
 		"tsup": "^8.1.0",
-		"typescript": "^5.4.5"
+		"typescript": "^5.4.5",
+		"vitest": "^1.6.0"
 	},
 	"bugs": {
 		"url": "https://github.com/kevink01/kevin-utils/issues"

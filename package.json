@@ -1,0 +1,42 @@
+{
+	"name": "kevin-utils",
+	"version": "0.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsup src/index.ts --format cjs,esm --dts --minify",
+		"lint": "eslint . --max-warnings 0",
+		"lint:fix": "eslint . --fix",
+		"prepare": "husky",
+		"test": "echo Hello"
+	},
+	"keywords": [],
+	"author": "Kevin Kulich",
+	"license": "GPL-3.0-only",
+	"devDependencies": {
+		"@types/node": "^20.14.2",
+		"@typescript-eslint/eslint-plugin": "^7.13.0",
+		"@typescript-eslint/parser": "^7.13.0",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-import-resolver-typescript": "^3.6.1",
+		"eslint-plugin-import": "^2.29.1",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.7",
+		"tsup": "^8.1.0",
+		"typescript": "^5.4.5"
+	},
+	"bugs": {
+		"url": "https://github.com/kevink01/kevin-utils/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kevink01/kevin-utils.git"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"homepage": "https://github.com/kevink01/kevin-utilst#readme"
+}

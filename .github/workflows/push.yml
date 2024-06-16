@@ -1,0 +1,48 @@
+name: Lint & Build
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - release
+  pull_request:
+    branches:
+      - release
+
+env:
+  NODE_VERSION: ${{ 18 }}
+
+jobs:
+  dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Use Node.JS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint codebase
+        run: pnpm lint
+
+      - name: Test functions
+        run: pnpm test
+
+      - name: Build package
+        run: pnpm build

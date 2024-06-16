@@ -1,4 +1,4 @@
-name: Lint & Build
+name: Lint & Test
 
 on:
   push:
@@ -44,5 +44,5 @@ jobs:
       - name: Test functions
         run: pnpm test
 
-      - name: Build package
+      - name: Build application
         run: pnpm build

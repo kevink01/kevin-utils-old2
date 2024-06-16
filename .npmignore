@@ -1,0 +1,13 @@
+.changeset
+.github
+.husky
+
+src
+tests
+
+.lintstagedrc
+.prettierignore
+.*.json
+
+tsconfig.json
+vitest.config.mjs

@@ -16,6 +16,7 @@ pnpm-lock.yaml
 # Ignore files
 .gitignore
 .prettierignore
+.npmignore
 
 # Images
 *.ico
@@ -25,3 +26,4 @@ pnpm-lock.yaml
 *.jpeg
 
 .github
+.npmrc

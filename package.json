@@ -10,6 +10,7 @@
 		"lint": "eslint . --max-warnings 0",
 		"lint:fix": "eslint . --fix",
 		"prepare": "husky",
+		"publish": "pnpm publish",
 		"test": "vitest run --reporter=verbose",
 		"test:coverage": "vitest --coverage",
 		"test:ui": "vitest --ui",

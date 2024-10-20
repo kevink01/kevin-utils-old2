@@ -17,6 +17,7 @@ jobs:
   setup:
     uses: kevink01/kevin-utils-old2/.github/workflows/setup.yml@main
   dev:
+    needs: 'setup'
     runs-on: ubuntu-latest
     steps:
       - name: Lint codebase

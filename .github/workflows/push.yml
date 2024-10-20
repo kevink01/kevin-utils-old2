@@ -16,8 +16,6 @@ env:
 jobs:
   setup:
     uses: kevink01/kevin-utils-old2/.github/workflows/setup.yml@main
-    with:
-      NODE_VERSION: ${{ env.NODE_VERSION }}
   dev:
     runs-on: ubuntu-latest
     steps:

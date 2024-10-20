@@ -1,11 +1,9 @@
 name: Setup & Install
 
-on:
-  workflow_call:
-    inputs:
-      NODE_VERSION:
-        required: true
-        type: number
+on: workflow_call:
+
+env:
+  NODE_VERSION: ${{ vars.NODE_VERSION }}
 
 jobs:
   setup:
